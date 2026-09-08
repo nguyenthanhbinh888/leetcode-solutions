@@ -1,20 +1,52 @@
-class Solution {
-public:
-    vector<int> twoSum(vector<int>& nums, int target) {
-        unordered_map<int, int> map;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Arrays;
 
-        for (int i = 0; i < nums.size(); ++i) {
+public class LeetCode1 {
+
+    public static int[] twoSum(int[] nums, int target) {
+
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+
             int complement = target - nums[i];
 
-            // Nếu tìm thấy phần bù trong map, trả về kết quả
-            if (map.find(complement) != map.end()) {
-                return {map[complement], i};
+            // Nếu đã có phần bù trong map
+            if (map.containsKey(complement)) {
+                return new int[]{map.get(complement), i};
             }
 
-            // Nếu chưa thấy, lưu giá trị hiện tại vào map
-            map[nums[i]] = i;
+            // Lưu giá trị hiện tại và vị trí của nó
+            map.put(nums[i], i);
         }
 
-        return {}; // Trường hợp không tìm thấy, nhưng theo đề là luôn có đáp án
+        return new int[]{};
     }
-};
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Nhap so luong phan tu: ");
+        int n = scanner.nextInt();
+
+        int[] nums = new int[n];
+
+        System.out.println("Nhap cac phan tu:");
+
+        for (int i = 0; i < n; i++) {
+            nums[i] = scanner.nextInt();
+        }
+
+        System.out.print("Nhap target: ");
+        int target = scanner.nextInt();
+
+        int[] result = twoSum(nums, target);
+
+        System.out.println("Ket qua: " + Arrays.toString(result));
+
+        scanner.close();
+    }
+}
