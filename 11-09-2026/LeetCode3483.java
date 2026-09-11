@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-public class Main {
+public class LeetCode3483 {
 
     public static int totalNumbers(int[] digits) {
 
