@@ -1,3 +1,4 @@
+package D29_07_2025;
 import java.util.Arrays;
 import java.util.Scanner;
 

@@ -1,3 +1,4 @@
+package D14_09_2926;
 import java.util.Scanner;
 
 public class  LeetCode3903 {

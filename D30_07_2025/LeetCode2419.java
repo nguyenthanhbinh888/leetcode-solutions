@@ -1,3 +1,4 @@
+package D30_07_2025;
 import java.util.Scanner;
 
 public class LeetCode2419 {
