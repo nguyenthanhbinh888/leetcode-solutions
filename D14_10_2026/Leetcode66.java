@@ -1,4 +1,4 @@
-package D12_10_2026.D14_10_2026;
+package D14_10_2026;
 
 
 import java.util.Arrays;
